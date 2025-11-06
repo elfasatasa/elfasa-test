@@ -126,7 +126,7 @@ export default function Test() {
           Вопрос {currentIndex + 1} из {shuffledQuestions.length}
         </h2>
         <p className="mb-4">{currentQuestion.question}</p>
-
+<br />
         <div className="flex flex-col gap-2">
           {shuffledVariants.map((v, idx) => {
             const isSelected = selectedAnswers[currentQuestion.id] === v;
