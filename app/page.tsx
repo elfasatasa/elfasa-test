@@ -13,7 +13,7 @@ interface IPhysics {
 interface ITestState {
   currentIndex: number;
   selectedAnswers: Record<number, string>;
-  limitId: number; // теперь лимит по ID
+  limitId: number;
   showAnswers: boolean;
   shuffledQuestions: IPhysics[];
   shuffledVariantsMap: Record<number, string[]>;
@@ -26,7 +26,7 @@ export default function Test() {
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
   const [showAnswers, setShowAnswers] = useState<boolean>(false);
   const [limitId, setLimitId] = useState<number>(data.length);
-  const [inputId, setInputId] = useState<string>(String(data.length)); // строка для input
+  const [inputId, setInputId] = useState<string>(String(data.length));
   const [shuffledQuestions, setShuffledQuestions] = useState<IPhysics[]>([]);
   const [shuffledVariantsMap, setShuffledVariantsMap] = useState<Record<number, string[]>>({});
 
@@ -67,7 +67,6 @@ export default function Test() {
     shuffledQuestions.length > 0 ? shuffledQuestions[currentIndex] : null;
 
   const initShuffledQuestions = (maxId: number) => {
-    // фильтруем только вопросы с id <= maxId
     const filtered = data.filter(q => q.id <= maxId);
     const shuffled = [...filtered].sort(() => Math.random() - 0.5);
 
@@ -115,14 +114,19 @@ export default function Test() {
 
   const shuffledVariants = shuffledVariantsMap[currentQuestion.id] || currentQuestion.variants;
 
+  // Считаем количество правильных ответов
+  const correctCount = shuffledQuestions.reduce((acc, q) => {
+    return acc + (selectedAnswers[q.id] === q.correctAnswer ? 1 : 0);
+  }, 0);
+
   return (
-    <div style={{ maxWidth: 576, margin: "10px auto", padding: "12px" }}>
+    <div style={{ maxWidth: 576, margin: "10px auto", padding: "18px" }}>
       <div className="min-h-screen p-4 bg-black text-white flex flex-col items-center">
         <h2 className="text-lg font-bold mb-2">
           Вопрос {currentIndex + 1} из {shuffledQuestions.length}
         </h2>
         <p className="mb-4">{currentQuestion.question}</p>
-<br />
+
         <div className="flex flex-col gap-2">
           {shuffledVariants.map((v, idx) => {
             const isSelected = selectedAnswers[currentQuestion.id] === v;
@@ -142,13 +146,12 @@ export default function Test() {
                 onClick={() => handleAnswer(v)}
                 className={`block w-full text-left p-3 rounded border border-gray ${bgColor} transition-colors`}
               >
-                
                 {v}
               </button>
             );
           })}
         </div>
-<br />
+
         <div style={{maxWidth: 576, display:"flex",gap:100,fontSize:26}}>
           <button
             onClick={prevQuestion}
@@ -165,7 +168,7 @@ export default function Test() {
             {">"}
           </button>
         </div>
-<br />
+
         <div className="mt-6 flex flex-wrap items-center gap-4">
           <label className="flex items-center gap-2">
             Лимит ID:
@@ -178,20 +181,24 @@ export default function Test() {
               className="w-20 p-2 rounded border border-white bg-gray-900 text-white text-center"
             />
           </label>
-<br />
+
           <button
             onClick={() => setShowAnswers(!showAnswers)}
-            className="px-4 py-2  border-white rounded hover:bg-gray-800"
+            className="px-4 py-2 border border-white rounded hover:bg-gray-800"
           >
             {showAnswers ? "Скрыть ответы" : "Показать ответы"}
           </button>
 
           <button
             onClick={resetTest}
-            className="px-4 py-2  border-white rounded hover:bg-gray-800"
+            className="px-4 py-2 border border-white rounded hover:bg-gray-800"
           >
             Сбросить тест
           </button>
+        </div>
+<br />
+        <div className="mt-4 text-lg font-bold">
+          Правильных ответов: {correctCount} / {shuffledQuestions.length}
         </div>
       </div>
     </div>
