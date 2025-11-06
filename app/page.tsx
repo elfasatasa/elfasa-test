@@ -169,7 +169,7 @@ export default function Test() {
             <input
               type="number"
               min={1}
-              max={data.length}
+              max={60}
               value={limit}
               onChange={(e) => handleLimitChange(parseInt(e.target.value))}
               className="w-20 p-2 rounded  border-white bg-gray-900 text-white text-center"
