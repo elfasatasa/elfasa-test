@@ -1,0 +1,557 @@
+
+
+[
+     {
+    "id": 1,
+    "question": "Elektr apparatlarini iqlimiy ijrosi bo‘yicha “УХЛ / NF / 1” belgilanishi nimani anglatadi?",
+    "variants": [
+      "Nam va quruq tropik iqlim; barcha joylashuvlar",
+      "O‘rtamiyona iqlim",
+      "O‘rtamiyona va sovuq iqlim",
+      "Quruq tropik iqlim"
+    ],
+    "correctAnswer": "O‘rtamiyona va sovuq iqlim"
+  },
+  {
+    "id": 2,
+    "question": "Elektr apparatlari uchun umumiy talabga ko‘ra, qisqa tutashuvdan so‘ng apparat qanday holatni ta’minlashi shart?",
+    "variants": [
+      "Zudlik bilan almashtirilishi",
+      "Nominal parametrlaridan yuqori ishlashi",
+      "Ish qobiliyatini tiklab bo‘lmasligi",
+      "Ish qobiliyatini saqlashi va ortiqcha hodisalar keltirib chiqarmasligi"
+    ],
+    "correctAnswer": "Ish qobiliyatini saqlashi va ortiqcha hodisalar keltirib chiqarmasligi"
+  },
+  {
+    "id": 3,
+    "question": "Ko‘pchilik elektr apparatlari uchun ishlab chiqarish balandligi qanday qabul qilinadi va undan yuqoriga ko‘tarilganda nima qilinadi?",
+    "variants": [
+      "500 m; yuklama oshiriladi",
+      "1000 m; har 100 m uchun nominal yuklama kamaytiriladi",
+      "1500 m; o‘zgarmaydi",
+      "2000 m; faqat izolyatsiya sinovi"
+    ],
+    "correctAnswer": "1000 m; har 100 m uchun nominal yuklama kamaytiriladi"
+  },
+  {
+    "id": 4,
+    "question": "Tasarrufda joylashtirish bo‘yicha “3-kategoriya” qanday xonalarni bildiradi?",
+    "variants": [
+      "Ochiq havo",
+      "Shiypon yoki katta xonalar",
+      "Tabiiy ventilyatsiyali katta xonalar",
+      "Sun’iy iqlimli xonalar"
+    ],
+    "correctAnswer": "Tabiiy ventilyatsiyali katta xonalar"
+  },
+  {
+    "id": 5,
+    "question": "Elektr apparatlarining asosiy funksiyasi bo‘yicha sinflanishida “chegaralovchi apparatlar”ning vazifasi nimadan iborat?",
+    "variants": [
+      "Chastotani o‘zgartirish",
+      "Qisqa tutashuv toklarini va o‘ta kuchlanishlarni chegaralash",
+      "O‘lchash zanjirlarini galvanik ajratish",
+      "Teskari aloqa hosil qilish"
+    ],
+    "correctAnswer": "Qisqa tutashuv toklarini va o‘ta kuchlanishlarni chegaralash"
+  },
+  {
+    "id": 6,
+    "question": "Kontakt o‘tish qarshiligi Rk ~ a / F^n formuladagi n parametrining fizik ma’nosi qaysi javobda to‘g‘ri berilgan?",
+    "variants": [
+      "Materialning solishtirma issiqligi",
+      "Kontakt yuzasidagi oksid qalinligi",
+      "Kontakt konstruksiyasiga bog‘liq o‘zgarmas ko‘rsatkich",
+      "Zichlik bo‘yicha koeffitsient"
+    ],
+    "correctAnswer": "Kontakt konstruksiyasiga bog‘liq o‘zgarmas ko‘rsatkich"
+  },
+  {
+    "id": 7,
+    "question": "Kontakt materiallari ichida oksidlanishga eng chidamli juftliklardan biri qaysi?",
+    "variants": [
+      "Mis–qalay",
+      "Kumush–kadmiy oksid",
+      "Volfram–oltin–platina",
+      "Alyuminiy–nikel"
+    ],
+    "correctAnswer": "Volfram–oltin–platina"
+  },
+  {
+    "id": 8,
+    "question": "20 A gacha bo‘lgan toklar uchun odatda qanday turdagi kontakt tavsiya etiladi?",
+    "variants": [
+      "Ko‘p nuqtali",
+      "Chiziqli kontakt",
+      "Bir nuqtali kontakt",
+      "Yuzaki kontakt"
+    ],
+    "correctAnswer": "Bir nuqtali kontakt"
+  },
+  {
+    "id": 9,
+    "question": "Elektr yoyini so‘ndirishda “yoyni qisqa qismlarga bo‘lish” usulining fizik asosiy g‘oyasi nimada?",
+    "variants": [
+      "Ionlanishni keskin kuchaytirish",
+      "Har bir kichik yoyning katod/anod kuchlanishlari yig‘indisi tarmoq kuchlanishidan yuqori bo‘lishi",
+      "Har bir kichik yoyning katod/anod kuchlanishlari yig‘indisi tarmoq kuchlanishidan kichik bo‘lsa, yoy so‘nishi",
+      "Elektr maydoni teskari yo‘nalishi"
+    ],
+    "correctAnswer": "Har bir kichik yoyning katod/anod kuchlanishlari yig‘indisi tarmoq kuchlanishidan kichik bo‘lsa, yoy so‘nishi"
+  },
+  {
+    "id": 10,
+    "question": "Yoyni tor tirqishlarda so‘ndirishning asosiy mexanizmi qaysi?",
+    "variants": [
+      "Katod tomondan elektron emissiyaning kuchayishi",
+      "Sovuq yuzaga tegish orqali intensiv sovish va zaryadlarning diffuziyasi",
+      "Qizdirish orqali ionlashish",
+      "Tokni oshirish"
+    ],
+    "correctAnswer": "Sovuq yuzaga tegish orqali intensiv sovish va zaryadlarning diffuziyasi"
+  },
+  {
+    "id": 11,
+    "question": "AC zanjirida yoyning o‘z-o‘zidan o‘chishi qachon sodir bo‘lishi ehtimoli eng katta?",
+    "variants": [
+      "Tok amplitudasida",
+      "Tok noldan o‘tish lahzasida",
+      "Kuchlanish maksimumida",
+      "Har doim bir xil"
+    ],
+    "correctAnswer": "Tok noldan o‘tish lahzasida"
+  },
+  
+  {
+    "id": 12,
+    "question": "Moyli o‘chirgichlarda yoy atrofida hosil bo‘ladigan gaz pufagida asosiy komponent qaysi?",
+    "variants": [
+      "Azot",
+      "Vodorod",
+      "Kislorod",
+      "Argon"
+    ],
+    "correctAnswer": "Vodorod"
+  },
+  {
+    "id": 13,
+    "question": "Elegaz (SF₆)dan foydalangan yoy so‘ndirish usuli nimasi bilan samarali?",
+    "variants": [
+      "Past dielektrik mustahkamlik",
+      "Yuqori elektr mustahkamlik va tez sovutish",
+      "Past bosimda samarali",
+      "Faqat DC uchun mos"
+    ],
+    "correctAnswer": "Yuqori elektr mustahkamlik va tez sovutish"
+  },
+  {
+    "id": 14,
+    "question": "Vakuumda kontaktlar ajratilganda yoyning so‘nishiga asosiy sabab nima?",
+    "variants": [
+      "Termoemisiyaning ortishi",
+      "Vakuumning past elektr mustahkamligi",
+      "Vakuumning yuqori elektr mustahkamligi, tiklanish tezligi yuqoriligi",
+      "Katodning eritilishi"
+    ],
+    "correctAnswer": "Vakuumning yuqori elektr mustahkamligi, tiklanish tezligi yuqoriligi"
+  },
+  {
+    "id": 15,
+    "question": "EMT tarkibida energiyani o‘zgartirish vositasiga ko‘ra o‘zgartkichlar nechta asosiy turga bo‘linadi?",
+    "variants": [
+      "Ikki",
+      "Uch",
+      "To‘rt (elektromexanik, elektromagnit, parametrik, yarimo‘tkazgichli)",
+      "Besh"
+    ],
+    "correctAnswer": "To‘rt (elektromexanik, elektromagnit, parametrik, yarimo‘tkazgichli)"
+  },
+  {
+    "id": 16,
+    "question": "Zamonaviy o‘zgartkichlar tarkibidagi tiristor/tranzistorli yechimlar qaysi jarayonlar uchun keng qo‘llanadi?",
+    "variants": [
+      "Faqat kuchlanishni pasaytirish",
+      "AC→DC, PWM DC, hamda chastota o‘zgartkichlari sifatida",
+      "Faqat DC→AC",
+      "Faqat kuchlanish bo‘luvchi"
+    ],
+    "correctAnswer": "AC→DC, PWM DC, hamda chastota o‘zgartkichlari sifatida"
+  },
+  {
+    "id": 17,
+    "question": "EMT boshqaruv elementlari tarkibiga kiruvchi o‘lchov o‘zgartkichlariga misol sifatida qaysilar mos?",
+    "variants": [
+      "Termostat va kontaktor",
+      "Selsin, taxogenerator, induktiv/optik aylanuvchi datchiklar",
+      "Sig‘imli bo‘luvchi va kesgich",
+      "KZ va IO"
+    ],
+    "correctAnswer": "Selsin, taxogenerator, induktiv/optik aylanuvchi datchiklar"
+  },
+  {
+    "id": 18,
+    "question": "“Ishchi” va “boshqaruv” elementlari ajratilishi qaysi tizimga xos?",
+    "variants": [
+      "Termoelektr qurilmalari",
+      "Elektromexanik tizimlar",
+      "Faqat kuchaytirgichlar",
+      "O‘lchash ko‘priklari"
+    ],
+    "correctAnswer": "Elektromexanik tizimlar"
+  },
+  {
+    "id": 19,
+    "question": "Bipolyar tranzistorda emitter o‘tish qaysi holatda siljiganda “aktiv rejim” hosil bo‘ladi?",
+    "variants": [
+      "Emitter – teskari, kollektor – to‘g‘ri",
+      "Emitter – to‘g‘ri, kollektor – teskari",
+      "Har ikkisi – teskari",
+      "Har ikkisi – to‘g‘ri"
+    ],
+    "correctAnswer": "Emitter – to‘g‘ri, kollektor – teskari"
+  },
+  {
+    "id": 20,
+    "question": "UB sxemasida tok bo‘yicha kuchaytirish nega amalda ≈1 ga teng?",
+    "variants": [
+      "Chunki baza toki nolga teng",
+      "Chunki I_K faqat I_K0 bilan belgilanadi",
+      "Chunki I_K ≈ α·I_E va α≈1 bo‘lsa ham, kirish I_E ga bog‘liq, natijada tok bo‘yicha ortiqcha kuchayish yo‘q",
+      "Chunki UKB o‘zgarmaydi"
+    ],
+    "correctAnswer": "Chunki I_K ≈ α·I_E va α≈1 bo‘lsa ham, kirish I_E ga bog‘liq, natijada tok bo‘yicha ortiqcha kuchayish yo‘q"
+  },
+  {
+    "id": 21,
+    "question": "UE sxemasida differensial tok kuchaytirish koeffitsienti β ning odatiy oraliqlari?",
+    "variants": [
+      "0.1…1",
+      "1…10",
+      "10…1000 (ba’zan minglab)",
+      ">10⁶"
+    ],
+    "correctAnswer": "10…1000 (ba’zan minglab)"
+  },
+  {
+    "id": 22,
+    "question": "Erli effekti nimani anglatadi?",
+    "variants": [
+      "Emitter diffuziya uzunligining oshishi",
+      "Baza kengligi modulyatsiyasi – UKB ortishi bilan baza torayishi",
+      "Kollektor rekombinatsiyasining ortishi",
+      "Emitter o‘tishidagi qoplanish"
+    ],
+    "correctAnswer": "Baza kengligi modulyatsiyasi – UKB ortishi bilan baza torayishi"
+  },
+  {
+    "id": 23,
+    "question": "Emittorning differensial qarshiligi r_E ≈ φ_T / I_E (≈ 20–30 Ω @ 1 mA) qaysi o‘tishdan kelib chiqadi?",
+    "variants": [
+      "Kollektor o‘tishi",
+      "Baza sohasidagi hajmiy qarshilik",
+      "To‘g‘ri siljigan emitter p–n o‘tishi",
+      "Zatvor dielektrigi"
+    ],
+    "correctAnswer": "To‘g‘ri siljigan emitter p–n o‘tishi"
+  },
+  {
+    "id": 24,
+    "question": "UE sxemasida baza zanjirini uzib qo‘yish (IB=0) nimaga olib keladi?",
+    "variants": [
+      "IKE0 kichik bo‘ladi, xavfsiz",
+      "IKE0 ≫ IK0 bo‘lishi mumkin, ish rejimini buzishi ehtimoli yuqori",
+      "UKB nolga tushadi",
+      "β oshadi"
+    ],
+    "correctAnswer": "IKE0 ≫ IK0 bo‘lishi mumkin, ish rejimini buzishi ehtimoli yuqori"
+  },
+  {
+    "id": 25,
+    "question": "p–n o‘tish bilan boshqariladigan MTda U_ZI=0 da n-kanalli tranzistorda IS qanday bo‘ladi?",
+    "variants": [
+      "Nolga yaqin",
+      "Maksimal qiymatga yaqin",
+      "Manfiy",
+      "Har doim doimiy"
+    ],
+    "correctAnswer": "Maksimal qiymatga yaqin"
+  },
+  {
+    "id": 26,
+    "question": "p–n MTda kanal “berkilish kuchlanishi” U_ZI.BERK qanday ta’riflanadi?",
+    "variants": [
+      "USI=0 bo‘lganda IS=0 bo‘lishi",
+      "UZI shunday qiymatki, kanal kesimi nolga tushadi va IS ≈ 0",
+      "UKB shunday qiymat",
+      "Zatvor toki nolga teng bo‘lishi"
+    ],
+    "correctAnswer": "UZI shunday qiymatki, kanal kesimi nolga tushadi va IS ≈ 0"
+  },
+  {
+    "id": 27,
+    "question": "MDYa (MOSFET) tranzistorda “boyish rejimi” nimani anglatadi?",
+    "variants": [
+      "Manfiy UZI bilan kanal kambag‘allashadi",
+      "Musbat (n-kanal) UZI bilan kanal o‘tkazuvchanligi ortadi, IS oshadi",
+      "IS kamayadi",
+      "Kanal to‘liq berkiladi"
+    ],
+    "correctAnswer": "Musbat (n-kanal) UZI bilan kanal o‘tkazuvchanligi ortadi, IS oshadi"
+  },
+  {
+    "id": 28,
+    "question": "Maydoniy tranzistor tiklik parametri S = dIS/dUZI (mA/V) UZI ortishi bilan qanday o‘zgaradi?",
+    "variants": [
+      "Ortiadi",
+      "Kamayadi",
+      "O‘zgarmaydi",
+      "Avval ortadi, so‘ng kamayadi"
+    ],
+    "correctAnswer": "Kamayadi"
+  },
+  {
+    "id": 29,
+    "question": "To‘yinish rejimida MOSFETning differensial ichki qarshiligi R_i odatda…",
+    "variants": [
+      "Bir necha milliohm",
+      "Bir necha ohm",
+      "Bir necha megaohm va USI ga deyarli bog‘liq emas",
+      "Cheksiz"
+    ],
+    "correctAnswer": "Bir necha megaohm va USI ga deyarli bog‘liq emas"
+  },
+  {
+    "id": 30,
+    "question": "Kuchaytirgichlarda AChX ideal ko‘rinishi qanday?",
+    "variants": [
+      "V-simon",
+      "Gorizontal chiziq (K doimiy)",
+      "Ekspontensial",
+      "Sinusoidal"
+    ],
+    "correctAnswer": "Gorizontal chiziq (K doimiy)"
+  },
+  {
+    "id": 31,
+    "question": "Nochiziqli buzilishlar sababi sifatida to‘g‘ri ta’rifni ko‘rsating.",
+    "variants": [
+      "Tranzistor parametrlarining chastotaga bog‘liqligi",
+      "VAX ning eksponential/nolinearligi sabab harmonikalar paydo bo‘lishi",
+      "Manba ichki qarshiligi nol bo‘lishi",
+      "Fazaviy detektor"
+    ],
+    "correctAnswer": "VAX ning eksponential/nolinearligi sabab harmonikalar paydo bo‘lishi"
+  },
+  {
+    "id": 32,
+    "question": "Quvvat kuchaytirgichida μ (muvofiqlashuv koeffitsienti) ga doir to‘g‘ri fikrni tanlang.",
+    "variants": [
+      "μ ≪ 1 bo‘lsa quvvat maksimal",
+      "μ = 1 atrofida quvvat uzatilishi eng yaxshi",
+      "μ ≫ 1 bo‘lsa yo‘qotish minimal",
+      "μ hech narsaga ta’sir qilmaydi"
+    ],
+    "correctAnswer": "μ = 1 atrofida quvvat uzatilishi eng yaxshi"
+  },
+  {
+    "id": 33,
+    "question": "AV rejimdagi komplementar emitter qaytargichdan OK chiqish bosqichida foydalanishning asosiy sababi?",
+    "variants": [
+      "Chiqish qarshiligini katta qilish",
+      "Chiqish qarshiligini kichik, chiqish quvvatini katta qilish",
+      "Kirish qarshiligini kamaytirish",
+      "Nol dreyfini oshirish"
+    ],
+    "correctAnswer": "Chiqish qarshiligini kichik, chiqish quvvatini katta qilish"
+  },
+  {
+    "id": 34,
+    "question": "OKning ikki kirishi ma’nosi: “+” va “–” belgilar qaysi fazoviy munosabatni bildiradi?",
+    "variants": [
+      "“+” inverslaydi, “–” sinfaz",
+      "“+” sinfaz (inverslamaydi), “–” inverslaydi",
+      "Har ikkalasi inverslaydi",
+      "Har ikkalasi sinfaz"
+    ],
+    "correctAnswer": "“+” sinfaz (inverslamaydi), “–” inverslaydi"
+  },
+  {
+    "id": 35,
+    "question": "Inverslamaydigan OK qaytargichda kuchaytirish koeffitsienti K=1+R2/R1 bo‘lishi uchun qanday ulanish talab etiladi?",
+    "variants": [
+      "Kirish – “–”, TA – “+”ga",
+      "Kirish – “+”, TA (R1–R2 bo‘luvchi) – “–”ga",
+      "Har ikkisi “–”ga",
+      "Har ikkisi “+”ga"
+    ],
+    "correctAnswer": "Kirish – “+”, TA (R1–R2 bo‘luvchi) – “–”ga"
+  },
+  {
+    "id": 36,
+    "question": "Differensial kuchaytirgichda simmetrik va nosimmetrik chiqishlar KU bo‘yicha qanday bog‘liq?",
+    "variants": [
+      "Nosimmetrik 2 baravar katta",
+      "Simmetrik 2 baravar kichik",
+      "Nosimmetrik simmetrikdan 2 baravar kichik",
+      "Bir xil"
+    ],
+    "correctAnswer": "Nosimmetrik simmetrikdan 2 baravar kichik"
+  },
+  {
+    "id": 37,
+    "question": "Balans ko‘prigining sharti qanday yoziladi (to‘liq balans uchun)?",
+    "variants": [
+      "R1=R2",
+      "R1/R2=R3/R4",
+      "R1·R2=R3·R4",
+      "R1+R2=R3+R4"
+    ],
+    "correctAnswer": "R1/R2=R3/R4"
+  },
+  {
+    "id": 38,
+    "question": "EMTda ishchi elementlar sifatida qaysilar ko‘rsatiladi?",
+    "variants": [
+      "Motor, boshqariluvchi o‘zgartkich, kinematik zanjir",
+      "Operatsion kuchaytirgich, selsin",
+      "Rele, datchik, taxogenerator",
+      "KZ, OK, DK"
+    ],
+    "correctAnswer": "Motor, boshqariluvchi o‘zgartkich, kinematik zanjir"
+  },
+  {
+    "id": 39,
+    "question": "Rele va datchiklar qaysi katta guruh apparatlariga kiritiladi?",
+    "variants": [
+      "Chegaralovchi apparatlar",
+      "Nazoratlash apparatlari",
+      "Kommutatsion apparatlar",
+      "Rostlagichlar"
+    ],
+    "correctAnswer": "Nazoratlash apparatlari"
+  },
+  {
+    "id": 40,
+    "question": "Tok/kuchlanish transformatorlari va sig‘imli bo‘luvchilar qaysi apparatlar turiga kiradi?",
+    "variants": [
+      "O‘lchash apparatlari",
+      "Boshqaruv elementlari",
+      "Himoya relelari",
+      "Chegaralovchi apparatlar"
+    ],
+    "correctAnswer": "O‘lchash apparatlari"
+  },
+   {
+    "id": 41,
+    "question": "Elektr yoyining hosil bo‘lishida zarbaviy ionlanish mexanizmi qanday tasvirlanadi?",
+    "variants": [
+      "Elektronlar neytral molekulalarni mustahkamlash",
+      "Elektronlar neytral molekulalarga urilib ularni ionlashtirishi",
+      "Katod yuzasida elektronlar “muzlaydi”",
+      "Molekulalar kuchlanishni pasaytiradi"
+    ],
+    "correctAnswer": "Elektronlar neytral molekulalarga urilib ularni ionlashtirishi"
+  },
+  {
+    "id": 42,
+    "question": "AC yoyni so‘ndirishda “toksiz pauza”ning amaliy ahamiyati nimada?",
+    "variants": [
+      "Ionlanish ortadi",
+      "Termoionlanish to‘xtab, rekombinatsiya kuchayadi, tiklanish tezlashadi",
+      "Katod emissiyasi ortadi",
+      "Kuchlanish doimiy qoladi"
+    ],
+    "correctAnswer": "Termoionlanish to‘xtab, rekombinatsiya kuchayadi, tiklanish tezlashadi"
+  },
+  {
+    "id": 43,
+    "question": "1 kV gacha apparatlarda yoyni so‘ndirishning eng oddiy usullaridan biri…",
+    "variants": [
+      "Yuqori bosimli gazda so‘ndirish",
+      "Kontaktlarni tez ajratib yoy uzunligini oshirish",
+      "Vakuum kamerasi",
+      "Supero‘tkazuvchi kontaktlar"
+    ],
+    "correctAnswer": "Kontaktlarni tez ajratib yoy uzunligini oshirish"
+  },
+  {
+    "id": 44,
+    "question": "Yuqori kuchlanishli o‘chirgichlarda kuchlanishni bo‘linmalarga taqsimlashning maqsadi…",
+    "variants": [
+      "Kontaktlarni qizdirish",
+      "Tiklanish kuchlanishini har bo‘linmada kamaytirib teshilish ehtimolini pasaytirish",
+      "Tarmoq kuchlanishini oshirish",
+      "Qarshilikni nolga tushirish"
+    ],
+    "correctAnswer": "Tiklanish kuchlanishini har bo‘linmada kamaytirib teshilish ehtimolini pasaytirish"
+  },
+  {
+    "id": 45,
+    "question": "Kontaktlarning asosiy kamchiliklaridan biri sifatida nimalar ko‘rsatiladi?",
+    "variants": [
+      "Gabarit va massa pasayishi",
+      "Oksidlanish natijasida ishonchlilik oshishi",
+      "Tez-tez kommutatsiyada yemirilish va oksidlanish sabab ishonchlilikning kamayishi",
+      "O‘tish qarshiligining nolga tushishi"
+    ],
+    "correctAnswer": "Tez-tez kommutatsiyada yemirilish va oksidlanish sabab ishonchlilikning kamayishi"
+  },
+  {
+    "id": 46,
+    "question": "Operatsion kuchaytirgich nima uchun “operatsion” deb ataladi?",
+    "variants": [
+      "Faqat bitli raqamli amallar bajaradi",
+      "Teskari aloqa bilan analog amallar (yig‘indi, integral, differensial va h.k.) bajarishi uchun",
+      "Faqat kuchaytirish vazifasi",
+      "Faqat komparator rejimi"
+    ],
+    "correctAnswer": "Teskari aloqa bilan analog amallar (yig‘indi, integral, differensial va h.k.) bajarishi uchun"
+  },
+  {
+    "id": 47,
+    "question": "Inverslaydigan OK qaytargichda chiqish/kirish fazoviy aloqasi…",
+    "variants": [
+      "Sinfaz",
+      "Qarshi faza (180° burilish)",
+      "90° kechikish",
+      "45° yetaklash"
+    ],
+    "correctAnswer": "Qarshi faza (180° burilish)"
+  },
+  {
+    "id": 48,
+    "question": "EMTda moslashtiruvchi qurilmalar misoli sifatida to‘g‘ri juftlikni tanlang.",
+    "variants": [
+      "Fazaviy detektor, quvvat kuchaytirgich, RA/AR o‘zgartkichlar",
+      "Emitter qaytargich, KZ, IO",
+      "Rele, kontaktor, paketchi",
+      "Selsin, taxogenerator, KZ"
+    ],
+    "correctAnswer": "Fazaviy detektor, quvvat kuchaytirgich, RA/AR o‘zgartkichlar"
+  },
+  {
+    "id": 49,
+    "question": "Kuchaytirgichlarda chastotaviy buzilishlar qaysi ko‘rsatkich orqali baholanadi?",
+    "variants": [
+      "AChX — kuchaytirish koeffitsientining chastotaga bog‘liqligi",
+      "Uzatish funksiyasining fazasi",
+      "VAX ning qiyaligi",
+      "TA koeffitsienti"
+    ],
+    "correctAnswer": "AChX — kuchaytirish koeffitsientining chastotaga bog‘liqligi"
+  },
+  {
+    "id": 50,
+    "question": "Elektr apparatlarining xizmat muddati bo‘yicha zamonaviy mezon sifatida qo‘llanmada qanday raqam keltirilgan?",
+    "variants": [
+      "5 yil",
+      "10 yil",
+      "15 yil",
+      "25 yil"
+    ],
+    "correctAnswer": "25 yil"
+  }
+
+
+]
