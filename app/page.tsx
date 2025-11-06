@@ -13,10 +13,10 @@ interface IPhysics {
 interface ITestState {
   currentIndex: number;
   selectedAnswers: Record<number, string>;
-  limit: number;
+  limitId: number; // теперь лимит по ID
   showAnswers: boolean;
   shuffledQuestions: IPhysics[];
-  shuffledVariantsMap: Record<number, string[]>; // для хранения вариантов каждого вопроса
+  shuffledVariantsMap: Record<number, string[]>;
 }
 
 const STORAGE_KEY = "physicsTestState";
@@ -25,7 +25,8 @@ export default function Test() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
   const [showAnswers, setShowAnswers] = useState<boolean>(false);
-  const [limit, setLimit] = useState<number>(10);
+  const [limitId, setLimitId] = useState<number>(data.length);
+  const [inputId, setInputId] = useState<string>(String(data.length)); // строка для input
   const [shuffledQuestions, setShuffledQuestions] = useState<IPhysics[]>([]);
   const [shuffledVariantsMap, setShuffledVariantsMap] = useState<Record<number, string[]>>({});
 
@@ -37,14 +38,15 @@ export default function Test() {
         setShuffledQuestions(parsed.shuffledQuestions ?? []);
         setCurrentIndex(Math.min(parsed.currentIndex ?? 0, parsed.shuffledQuestions?.length - 1));
         setSelectedAnswers(parsed.selectedAnswers ?? {});
-        setLimit(parsed.limit ?? 10);
+        setLimitId(parsed.limitId ?? data.length);
+        setInputId(String(parsed.limitId ?? data.length));
         setShowAnswers(parsed.showAnswers ?? false);
         setShuffledVariantsMap(parsed.shuffledVariantsMap ?? {});
       } catch {
-        initShuffledQuestions(limit);
+        initShuffledQuestions(limitId);
       }
     } else {
-      initShuffledQuestions(limit);
+      initShuffledQuestions(limitId);
     }
   }, []);
 
@@ -53,19 +55,21 @@ export default function Test() {
     const state: ITestState = {
       currentIndex,
       selectedAnswers,
-      limit,
+      limitId,
       showAnswers,
       shuffledQuestions,
       shuffledVariantsMap
     };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  }, [currentIndex, selectedAnswers, limit, showAnswers, shuffledQuestions, shuffledVariantsMap]);
+  }, [currentIndex, selectedAnswers, limitId, showAnswers, shuffledQuestions, shuffledVariantsMap]);
 
   const currentQuestion: IPhysics | null =
     shuffledQuestions.length > 0 ? shuffledQuestions[currentIndex] : null;
 
-  const initShuffledQuestions = (limit: number) => {
-    const shuffled = [...data].sort(() => Math.random() - 0.5).slice(0, limit);
+  const initShuffledQuestions = (maxId: number) => {
+    // фильтруем только вопросы с id <= maxId
+    const filtered = data.filter(q => q.id <= maxId);
+    const shuffled = [...filtered].sort(() => Math.random() - 0.5);
 
     const variantsMap: Record<number, string[]> = {};
     shuffled.forEach(q => {
@@ -94,14 +98,16 @@ export default function Test() {
   };
 
   const resetTest = () => {
-    initShuffledQuestions(limit);
+    initShuffledQuestions(limitId);
     localStorage.removeItem(STORAGE_KEY);
   };
 
-  const handleLimitChange = (val: number) => {
-    if (isNaN(val) || val < 1 || val > data.length) return;
-    setLimit(val);
-    initShuffledQuestions(val);
+  const handleLimitChange = () => {
+    const val = parseInt(inputId);
+    if (isNaN(val) || val < 1) return;
+    const maxId = Math.min(val, data.length);
+    setLimitId(maxId);
+    initShuffledQuestions(maxId);
     localStorage.removeItem(STORAGE_KEY);
   };
 
@@ -110,20 +116,17 @@ export default function Test() {
   const shuffledVariants = shuffledVariantsMap[currentQuestion.id] || currentQuestion.variants;
 
   return (
-<div className="container" style={{maxWidth: 576, margin: "10px auto", padding:"12px"}}>
+    <div style={{ maxWidth: 576, margin: "10px auto", padding: "12px" }}>
       <div className="min-h-screen p-4 bg-black text-white flex flex-col items-center">
-      <div className="max-w-xl w-full">
         <h2 className="text-lg font-bold mb-2">
           Вопрос {currentIndex + 1} из {shuffledQuestions.length}
         </h2>
-        <br />
         <p className="mb-4">{currentQuestion.question}</p>
 <br />
         <div className="flex flex-col gap-2">
-          {shuffledVariants.map((v: string, idx: number) => {
+          {shuffledVariants.map((v, idx) => {
             const isSelected = selectedAnswers[currentQuestion.id] === v;
             const isCorrect = currentQuestion.correctAnswer === v;
-
             let bgColor = "";
             if (showAnswers) {
               if (isSelected && isCorrect) bgColor = "bg-green-600";
@@ -137,45 +140,45 @@ export default function Test() {
               <button
                 key={idx}
                 onClick={() => handleAnswer(v)}
-                style={{padding:"8px 4px"}}
                 className={`block w-full text-left p-3 rounded border border-gray ${bgColor} transition-colors`}
               >
+                
                 {v}
               </button>
             );
           })}
         </div>
 <br />
-        <div className="flex justify-between mt-6 gap-2 flex-wrap">
+        <div style={{maxWidth: 576, display:"flex",gap:100,fontSize:26}}>
           <button
             onClick={prevQuestion}
             disabled={currentIndex === 0}
-            className=" hover:bg-gray-700 disabled:opacity-50"
+            className="hover:bg-gray-700 disabled:opacity-50 px-4 py-2 rounded"
           >
             {"<"}
           </button>
           <button
             onClick={nextQuestion}
             disabled={currentIndex === shuffledQuestions.length - 1}
-            className=" hover:bg-gray-700 disabled:opacity-50"
+            className="hover:bg-gray-700 disabled:opacity-50 px-4 py-2 rounded"
           >
             {">"}
           </button>
         </div>
-
+<br />
         <div className="mt-6 flex flex-wrap items-center gap-4">
           <label className="flex items-center gap-2">
-            Лимит вопросов:
+            Лимит ID:
             <input
-              type="number"
-              min={1}
-              max={60}
-              value={limit}
-              onChange={(e) => handleLimitChange(parseInt(e.target.value))}
-              className="w-20 p-2 rounded  border-white bg-gray-900 text-white text-center"
+              type="text"
+              value={inputId}
+              onChange={(e) => setInputId(e.target.value)}
+              onBlur={handleLimitChange}
+              placeholder="например 50"
+              className="w-20 p-2 rounded border border-white bg-gray-900 text-white text-center"
             />
           </label>
-
+<br />
           <button
             onClick={() => setShowAnswers(!showAnswers)}
             className="px-4 py-2  border-white rounded hover:bg-gray-800"
@@ -192,6 +195,5 @@ export default function Test() {
         </div>
       </div>
     </div>
-</div>
   );
 }
